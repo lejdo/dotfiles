@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Script to automatically generate a up to date README.md with packages and descriptions
+# Used as git hook
+
 
 README="README.md"
 START="<!-- AUTO:START -->"
