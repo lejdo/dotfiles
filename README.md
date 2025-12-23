@@ -5,10 +5,10 @@ My personal dotfiles for Arch Linux + Hyprland.
 ---
 
 <!-- AUTO:START -->
-## Managed programs (GNU Stow)
+## Managed packages (GNU Stow)
 
 - hypr
-- scrips
+- kitty
 - waybar
 - wofi
 
