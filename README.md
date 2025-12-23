@@ -9,6 +9,7 @@ My personal dotfiles for Arch Linux + Hyprland.
 
 - hypr: Configuration for hypr
 - kitty: A modern, hackable, featureful, OpenGL-based terminal emulator
+- nvim: Configuration for nvim
 - waybar: Highly customizable Wayland bar for Sway and Wlroots based compositors
 - wofi: launcher for wlroots-based wayland compositors
 
