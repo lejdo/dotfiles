@@ -13,7 +13,15 @@ PACKAGES=$(find . -maxdepth 1 -type d \
 
 AUTO_CONTENT="## Managed packages (GNU Stow)\n\n"
 for pkg in $PACKAGES; do
-  AUTO_CONTENT+="- $pkg\n"
+  # Try to get pacman description
+  desc=$(pacman -Si "$pkg" 2>/dev/null | grep -E "^Description" | cut -d':' -f2- | xargs || true)
+
+  # Fallback if empty
+  if [[ -z "$desc" ]]; then
+    desc="Configuration for $pkg"
+  fi
+
+  AUTO_CONTENT+="- $pkg: $desc\n"
 done
 
 # Replace auto section
