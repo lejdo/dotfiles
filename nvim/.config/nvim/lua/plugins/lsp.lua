@@ -1,33 +1,40 @@
+---@diagnostic disable: undefined-global
 return {
   {
     "neovim/nvim-lspconfig",
-    event = "BufReadPre",
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
     },
     config = function()
-      local lspconfig = require("lspconfig")
 
       -- Python
-      lspconfig.pyright.setup({})
+      vim.lsp.config.pyright = {}
 
       -- TypeScript / JavaScript
-      lspconfig.ts_ls.setup({})  -- updated
+      vim.lsp.config.ts_ls = {}
 
       -- C / C++
-      lspconfig.clangd.setup({})
+      vim.lsp.config.clangd = {}
 
-      -- Lua
-      lspconfig.lua_ls.setup({
+      -- Lua (Neovim config)
+      vim.lsp.config.lua_ls = {
         settings = {
           Lua = {
-            diagnostics = { globals = { "vim" } },
-            workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+            diagnostics = {
+              globals = { "vim" },
+            },
+            workspace = {
+              library = vim.api.nvim_get_runtime_file("", true),
+              checkThirdParty = false,
+            },
             telemetry = { enable = false },
           },
         },
-      })
+      }
+
     end,
   },
 }
+
