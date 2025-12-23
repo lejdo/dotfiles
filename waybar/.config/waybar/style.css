@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: JetBrainsMono Nerd Font;
     font-size: 13px;
 }
 
@@ -15,7 +15,6 @@ window#waybar {
 window#waybar.hidden {
     opacity: 0.2;
 }
-
 /*
 window#waybar.empty {
     background-color: transparent;
@@ -24,7 +23,6 @@ window#waybar.solo {
     background-color: #FFFFFF;
 }
 */
-
 window#waybar.termite {
     background-color: #3F3F3F;
 }
@@ -83,7 +81,6 @@ button:hover {
 #memory,
 #disk,
 #temperature,
-#backlight,
 #network,
 #pulseaudio,
 #wireplumber,
@@ -181,9 +178,6 @@ label:focus {
     background-color: #964B00;
 }
 
-#backlight {
-    background-color: #90b1b1;
-}
 
 #network {
     background-color: #2980b9;
@@ -281,21 +275,6 @@ label:focus {
     min-width: 16px;
 }
 
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
 
 #scratchpad {
     background: rgba(0, 0, 0, 0.2);
