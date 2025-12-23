@@ -11,7 +11,7 @@ PACKAGES=$(find . -maxdepth 1 -type d \
   ! -name "scripts" \
   -printf "%f\n" | sort)
 
-AUTO_CONTENT="## Managed programs (GNU Stow)\n\n"
+AUTO_CONTENT="## Managed packages (GNU Stow)\n\n"
 for pkg in $PACKAGES; do
   AUTO_CONTENT+="- $pkg\n"
 done
