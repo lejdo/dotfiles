@@ -1,28 +1,15 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/mode",
-        "hyprland/scratchpad",
-        "custom/media"
     ],
     "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
-        "mpd",
-        "idle_inhibitor",
         "pulseaudio",
-        "network",
-        "power-profiles-daemon",
-        "cpu",
-        "memory",
         "temperature",
         "battery",
         "battery#bat2",
@@ -46,15 +33,6 @@
              "focused": "",
              "default": ""
          }
-     },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
     },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -116,9 +94,6 @@
         "format": "{usage}% ",
         "tooltip": false
     },
-    "memory": {
-        "format": "{}% "
-    },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -144,26 +119,6 @@
     },
     "battery#bat2": {
         "bat": "BAT2"
-    },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -193,8 +148,7 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
         "format" : "⏻ ",

@@ -12,6 +12,7 @@ My personal dotfiles for Arch Linux + Hyprland.
 - nvim: Configuration for nvim
 - waybar: Highly customizable Wayland bar for Sway and Wlroots based compositors
 - wofi: launcher for wlroots-based wayland compositors
+- zsh: A very advanced and programmable command interpreter (shell) for UNIX
 
 <!-- AUTO:END -->
 
