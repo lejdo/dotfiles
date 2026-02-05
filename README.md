@@ -2,6 +2,12 @@
 
 My personal dotfiles for Arch Linux + Hyprland.
 
+
+## Setup 
+Clone repository and run the bootstrap script:
+```bash
+./bootstrap.sh
+```
 ---
 
 <!-- AUTO:START -->
