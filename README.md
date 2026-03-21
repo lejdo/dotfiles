@@ -16,6 +16,7 @@ Clone repository and run the bootstrap script:
 - hypr: Configuration for hypr
 - kitty: A modern, hackable, featureful, OpenGL-based terminal emulator
 - nvim: Configuration for nvim
+- system: Configuration for system
 - waybar: Highly customizable Wayland bar for Sway and Wlroots based compositors
 - wofi: launcher for wlroots-based wayland compositors
 - zsh: A very advanced and programmable command interpreter (shell) for UNIX
