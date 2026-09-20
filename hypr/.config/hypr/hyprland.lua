@@ -1,6 +1,5 @@
 require("config.programs")
-require("config.desktop")
 require("config.appearance")
 require("config.keybinds")
--- require("config.laptop")
 require("config.rules")
+require("machine")
