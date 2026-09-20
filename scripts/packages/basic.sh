@@ -11,7 +11,7 @@ yay -S --needed \
     wofi \
     pipewire \
     wireplumber \
-    wl-clipboard
-
+    wl-clipboard \
+    man
 
 echo "Package installation complete"
