@@ -11,8 +11,10 @@ if [[ "$MACHINE" != "desktop" && "$MACHINE" != "laptop" ]]; then
     exit 1
 fi
 
-# maybe add script to install packages
-#
+./scripts/install_packages.sh
+
+./scripts/machine.sh "$MACHINE"
+
 # Maybe make script for stow alone more modular ish
 
 stow zsh
@@ -20,8 +22,5 @@ stow kitty
 stow nvim
 stow hypr
 
-sudo install -Dm644 system/modprobe/alsa.conf /etc/modprobe.d/alsa.conf
-
-./scripts/machine.sh "$MACHINE"
 
 echo "Bootstrap complete for: $MACHINE"
