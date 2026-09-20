@@ -29,7 +29,11 @@ hl.config({
 			vibrancy = 0.1696,
 		},
 	},
-	animations = {
+    cursor = {
+        no_hardware_cursors = 1,
+        inactive_timeout = 0,
+    },
+    animations = {
 		enabled = true,
 	},
 	dwindle = {

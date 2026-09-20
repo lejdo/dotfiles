@@ -32,3 +32,10 @@ hl.window_rule({
 	},
 	no_focus = true,
 })
+hl.window_rule({
+	name = "scratchpad-opacity",
+	match = {
+		workspace = "special:magic",
+	},
+	opacity = "0.60 0.60",
+})
